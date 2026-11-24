@@ -1,69 +1,163 @@
-🎙️ Studio Signal Noise Cancellation System Using MATLAB
-A MATLAB-based digital signal processing system designed to reduce background noise and enhance speech signals using Short-Time Fourier Transform (STFT), spectral subtraction and Least Mean Squares (LMS) adaptive filtering.
+# 🎙️ Studio Signal Noise Cancellation System Using MATLAB
 
-The project combines frequency-domain analysis and adaptive noise cancellation in a two-stage audio processing pipeline.
+A MATLAB-based Digital Signal Processing (DSP) system designed to reduce background noise and enhance speech signals using Short-Time Fourier Transform (STFT), Spectral Subtraction and Least Mean Squares (LMS) Adaptive Filtering.
 
-🔗 GitHub Repository: Studio-Signal-Noise-Cancellation
-🚀 Overview
-Unwanted background noise can significantly affect the quality and intelligibility of recorded speech. This project explores a hybrid signal enhancement approach that estimates stationary noise in the frequency domain and uses adaptive filtering to suppress residual noise.
+The project combines frequency-domain signal analysis and time-domain adaptive filtering to explore efficient noise cancellation and audio signal enhancement.
+
+🔗 GitHub Repository:\
+[Studio-Signal-Noise-Cancellation](https://github.com/srishtii26/Studio-Signal-Noise-Cancellation)
+
+---
+
+# 🚀 Overview
+
+Unwanted background noise significantly affects the quality and intelligibility of recorded audio signals.
+
+This project implements a hybrid noise cancellation system using two complementary digital signal processing techniques:
+
+- STFT-Based Spectral Subtraction
+- LMS Adaptive Noise Cancellation
 
 The system is designed to:
-- Analyze noisy audio signals.
-- Estimate background noise using spectral analysis.
-- Perform STFT-based spectral subtraction.
-- Implement reference-based LMS adaptive filtering.
-- Compare signal quality using Signal-to-Noise Ratio (SNR).
-- Generate enhanced audio files and waveform visualizations.
-💡 Problem Statement
-Audio recordings are often affected by fan noise, electrical hum and environmental disturbances. Conventional fixed filters may remove useful speech components when noise and speech occupy overlapping frequency ranges.
 
-The observed signal is modeled as:
+- Analyze noisy audio signals
+- Estimate background noise
+- Perform frequency-domain signal processing
+- Suppress stationary noise components
+- Reduce residual noise using adaptive filtering
+- Evaluate signal quality using SNR
+- Generate enhanced audio signals
+- Visualize signal processing results
 
-\(y(n)=s(n)+v(n)\)
+Built using MATLAB and fundamental Digital Signal Processing algorithms.
+
+---
+
+# 💡 Problem Statement
+
+Modern audio recording and communication systems are frequently affected by unwanted background noise.
+
+Common noise sources include:
+
+- Electrical interference
+- Fan and machinery noise
+- Environmental disturbances
+- Background acoustic noise
+- Random signal interference
+- Electrical hum
+
+Traditional fixed filtering techniques may be ineffective when speech and noise occupy overlapping frequency ranges.
+
+The noisy signal is mathematically represented as:
+
+$$y(n)=s(n)+v(n)$$
 
 Where:
-- $y(n)$ — observed noisy signal
-- $s(n)$ — clean speech signal
-- $v(n)$ — additive noise
-The objective is to estimate the original speech signal while minimizing unwanted noise and preserving useful audio information.
-🎯 Solution
-The proposed system combines two complementary signal processing techniques:
-- Spectral Subtraction: Estimates and suppresses stationary background noise in the frequency domain.
-- LMS Adaptive Filtering: Uses a correlated noise reference to estimate and reduce residual noise in the time domain.
-The two-stage approach is evaluated against the noisy input and the spectral-only output to investigate its effectiveness.
-✨ Features Implemented
-🎧 Audio Signal Processing
-- WAV audio input and output
-- Synthetic speech demonstration dataset
-- Clean, noisy and correlated noise reference signals
-- Offline audio enhancement pipeline
-📡 Frequency-Domain Analysis
-- Short-Time Fourier Transform using FFT
-- Window-based signal segmentation
-- Noise magnitude spectrum estimation
-- Magnitude spectral subtraction
-- Inverse FFT and weighted overlap-add reconstruction
-⚙️ Adaptive Noise Cancellation
-- Least Mean Squares (LMS) algorithm
-- 32-tap adaptive FIR filter
-- Dynamic filter coefficient updates
-- Reference-based residual noise estimation
-📊 Performance Evaluation
-- SNR calculation against a clean reference
-- Comparison of three processing stages
-- Waveform comparison plots
-- SNR bar chart
-- CSV export of numerical metrics
-📂 Audio Output Generation
-- Spectral subtraction output
-- Hybrid spectral subtraction and LMS output
-- Automatic result file generation
-🛠️ Tech Stack
-Programming & Development
-- MATLAB (R2024b recommended)
-- MATLAB scripting and modular functions
-- Git and GitHub
-Signal Processing Techniques
+
+- $y(n)$ — Observed noisy signal
+- $s(n)$ — Original clean signal
+- $v(n)$ — Additive noise component
+
+The primary objective is to estimate the original signal while minimizing unwanted noise and preserving useful audio information.
+
+---
+
+# 🎯 Solution
+
+The proposed system addresses these challenges using a two-stage hybrid noise cancellation architecture.
+
+## Stage 1 — Spectral Subtraction
+
+- Frequency-domain signal analysis
+- Background noise spectrum estimation
+- Stationary noise suppression
+- Signal reconstruction
+
+## Stage 2 — LMS Adaptive Filtering
+
+- Adaptive noise estimation
+- Dynamic filter coefficient adjustment
+- Residual noise suppression
+- Reference-based signal enhancement
+
+The combined approach is designed to investigate noise reduction while preserving important signal characteristics.
+
+---
+
+# ✨ Features Implemented
+
+## 🎧 Audio Signal Processing
+
+- WAV Audio Input
+- Audio Signal Loading
+- Synthetic Speech Demonstration
+- Clean Reference Signal
+- Noisy Audio Signal
+- Correlated Noise Reference
+- Offline Audio Processing
+
+---
+
+## 📡 Frequency-Domain Analysis
+
+- Fast Fourier Transform (FFT)
+- Inverse Fast Fourier Transform (IFFT)
+- Short-Time Fourier Transform (STFT)
+- Window-Based Signal Segmentation
+- Noise Spectrum Estimation
+- Frequency-Domain Spectral Subtraction
+- Signal Reconstruction
+
+---
+
+## ⚙️ Adaptive Noise Cancellation
+
+- Least Mean Squares (LMS) Algorithm
+- Adaptive FIR Filtering
+- 32-Tap Adaptive Filter
+- Dynamic Weight Adjustment
+- Error Signal Calculation
+- Reference-Based Noise Estimation
+- Residual Noise Suppression
+
+---
+
+## 📊 Performance Evaluation
+
+- Signal-to-Noise Ratio (SNR) Calculation
+- Input Signal Quality Evaluation
+- Spectral Subtraction Evaluation
+- Hybrid Filtering Evaluation
+- Waveform Comparison
+- SNR Comparison Graph
+- Numerical Results Export
+
+---
+
+## 📂 Audio Output Management
+
+- Automatic Audio File Generation
+- Spectral Subtraction Audio Output
+- Final Noise-Cancelled Audio Output
+- Graph Generation
+- CSV-Based Performance Report
+
+---
+
+# 🛠️ Tech Stack
+
+## Programming Language
+
+- MATLAB
+
+## Development Environment
+
+- MATLAB R2024b (Recommended)
+- Visual Studio Code
+
+## Signal Processing Techniques
+
+- Digital Signal Processing (DSP)
 - Fast Fourier Transform (FFT)
 - Inverse Fast Fourier Transform (IFFT)
 - Short-Time Fourier Transform (STFT)
@@ -71,66 +165,170 @@ Signal Processing Techniques
 - Least Mean Squares (LMS)
 - Adaptive FIR Filtering
 - Signal-to-Noise Ratio (SNR)
-The repository implementation uses base MATLAB functions and explicit LMS coefficient updates. No additional toolbox is required by the supplied scripts.
-🏗️ System Architecture
+
+## Version Control
+
+- Git
+- GitHub
+
+The repository implementation uses base MATLAB functions and explicit adaptive filter coefficient updates.
+
+---
+
+# 🏗️ System Architecture
+
 ```mermaid
 flowchart TD
-    A[Noisy audio input] --> B[Windowing and STFT]
-    B --> C[Noise spectrum estimation]
-    B --> D[Spectral subtraction]
-    C --> D
-    D --> E[Inverse STFT and reconstruction]
-    E --> F[LMS adaptive filtering]
-    R[Correlated noise reference] --> F
-    F --> G[Enhanced audio]
-    A --> H[SNR evaluation]
-    E --> H
-    G --> H
-    S[Clean reference] --> H
-    H --> I[Plots and CSV report]
+    A[Noisy Audio Input] --> B[Signal Segmentation]
+    B --> C[Short-Time Fourier Transform]
+    C --> D[Noise Spectrum Estimation]
+    C --> E[Spectral Subtraction]
+    D --> E
+    E --> F[Inverse STFT]
+    F --> G[LMS Adaptive Filtering]
+    R[Correlated Noise Reference] --> G
+    G --> H[Enhanced Audio Signal]
+    H --> I[SNR Performance Evaluation]
+    S[Clean Reference Signal] --> I
+    I --> J[Waveform Visualization]
+    I --> K[SNR Comparison]
+    I --> L[CSV Performance Report]
 ```
-🔬 Methodology
-1️⃣ Audio Input
-The demonstration loads three aligned WAV files: noisy speech, clean reference speech and a correlated noise reference. The clean reference is used for evaluation, not as an input to the enhancement algorithms.
-2️⃣ STFT and Noise Estimation
-The noisy signal is divided into overlapping frames and transformed into the frequency domain. The noise magnitude spectrum is estimated from frames within the first 0.5 seconds, which contain noise only.
-3️⃣ Spectral Subtraction
-The estimated noise magnitude is subtracted from each noisy magnitude spectrum. A spectral floor limits excessive attenuation, and the original phase is retained.
 
-\(\hat{S}(k,m)=\max(|Y(k,m)|-|\hat{V}(k)|,\beta|Y(k,m)|)e^{j\angle Y(k,m)}\)
+---
 
-The enhanced time-domain signal is reconstructed using inverse FFT and weighted overlap-add.
-4️⃣ LMS Adaptive Filtering
-The spectral-stage output becomes the primary signal. A separate correlated noise reference is used to estimate the remaining noise.
+# 🔬 Project Methodology
 
-\(\hat{v}(n)=\mathbf{w}^{T}(n)\mathbf{u}(n)\)
+## 1️⃣ Audio Signal Acquisition
 
-\(e(n)=d(n)-\hat{v}(n)\)
+The system loads three audio signals:
 
-\(\mathbf{w}(n+1)=\mathbf{w}(n)+\mu e(n)\mathbf{u}(n)\)
+- Original clean reference signal
+- Noise-corrupted audio signal
+- Correlated noise reference signal
+
+The clean reference signal is used for performance evaluation rather than as an input to the enhancement algorithms.
+
+---
+
+## 2️⃣ Short-Time Fourier Transform (STFT)
+
+The noisy audio signal is divided into overlapping frames.
+
+Each frame is transformed into the frequency domain using the Fast Fourier Transform.
+
+STFT enables the analysis of frequency components over short time intervals.
+
+$$Y(k,m)=\sum_n y(n)w(n-mH)e^{-j2\pi kn/N}$$
 
 Where:
-- $d(n)$ — spectral-stage output
-- $\mathbf{u}(n)$ — noise reference vector
-- $\mathbf{w}(n)$ — adaptive filter weights
-- $\mu$ — step size
-- $e(n)$ — enhanced output signal
-5️⃣ Output and Evaluation
-The system exports enhanced audio and compares the noisy, spectral-only and hybrid signals using SNR and waveform plots.
-⚙️ System Configuration
-Parameter	Value
-Demo sampling rate	16 kHz
-Frame duration	32 ms
-Frame overlap	50%
-FFT size	Next power of two of frame length
-Noise estimation interval	0.5 seconds
-Spectral floor	5% of noisy magnitude
-LMS filter length	32 taps
-LMS step size	0.01
-Processing mode	Offline
 
+- $y(n)$ — Input signal
+- $w(n)$ — Window function
+- $H$ — Hop size
+- $N$ — FFT length
+- $k$ — Frequency index
+- $m$ — Frame index
 
-📁 Project Structure
+---
+
+## 3️⃣ Noise Spectrum Estimation
+
+The background noise spectrum is estimated using the initial noise-only portion of the audio signal.
+
+The estimated noise spectrum is used to identify unwanted frequency components.
+
+This stage helps distinguish stationary background noise from useful signal information.
+
+---
+
+## 4️⃣ Spectral Subtraction
+
+The estimated noise magnitude spectrum is subtracted from the noisy signal magnitude spectrum.
+
+The basic spectral subtraction operation is represented as:
+
+$$|\hat{S}(k)|=|Y(k)|-|\hat{V}(k)|$$
+
+Where:
+
+- $Y(k)$ — Noisy signal spectrum
+- $\hat{V}(k)$ — Estimated noise spectrum
+- $\hat{S}(k)$ — Estimated clean signal spectrum
+
+A spectral floor is applied to prevent excessive attenuation.
+
+The original phase information is retained during signal reconstruction.
+
+---
+
+## 5️⃣ Signal Reconstruction
+
+The enhanced frequency-domain signal is converted back into the time domain using inverse FFT and weighted overlap-add reconstruction.
+
+The reconstructed signal becomes the input to the adaptive filtering stage.
+
+---
+
+## 6️⃣ LMS Adaptive Filtering
+
+The Least Mean Squares algorithm dynamically adjusts the filter coefficients to estimate residual noise.
+
+The adaptive filter output is calculated as:
+
+$$\hat{v}(n)=\mathbf{w}^{T}(n)\mathbf{u}(n)$$
+
+The error signal is calculated as:
+
+$$e(n)=d(n)-\hat{v}(n)$$
+
+The LMS weight update equation is:
+
+$$\mathbf{w}(n+1)=\mathbf{w}(n)+\mu e(n)\mathbf{u}(n)$$
+
+Where:
+
+- $\mathbf{w}(n)$ — Adaptive filter coefficient vector
+- $\mathbf{u}(n)$ — Noise reference vector
+- $\mu$ — Step size
+- $e(n)$ — Error signal
+- $d(n)$ — Spectral subtraction output
+
+The error signal represents the final enhanced audio output.
+
+---
+
+## 7️⃣ Performance Evaluation
+
+The original noisy signal, spectral subtraction output and final hybrid output are compared using Signal-to-Noise Ratio.
+
+Waveform plots and numerical performance reports are generated for further analysis.
+
+---
+
+# ⚙️ System Configuration
+
+| Parameter | Configuration |
+|---|---|
+| Programming Environment | MATLAB |
+| Sampling Frequency | 16 kHz |
+| Frame Duration | 32 ms |
+| Frame Overlap | 50% |
+| FFT Size | Next Power of Two |
+| Noise Estimation Duration | 0.5 Seconds |
+| Spectral Floor | 5% |
+| LMS Filter Length | 32 Taps |
+| LMS Step Size | 0.01 |
+| Input Audio Format | WAV |
+| Output Audio Format | WAV |
+| Processing Mode | Offline |
+| Evaluation Metric | SNR |
+
+---
+
+# 📁 Project Structure
+
+```text
 Studio-Signal-Noise-Cancellation/
 │
 ├── audio/
@@ -148,104 +346,314 @@ Studio-Signal-Noise-Cancellation/
 ├── run_demo.m
 ├── README.md
 └── .gitignore
-⚙️ Installation & Setup
-1️⃣ Clone Repository
+```
+
+---
+
+# 📂 File Description
+
+| File | Description |
+|---|---|
+| run_demo.m | Main project execution script |
+| spectral_subtraction.m | Frequency-domain noise reduction algorithm |
+| lms_cancel.m | LMS adaptive noise cancellation algorithm |
+| clean_reference.wav | Original reference audio |
+| noisy_audio.wav | Noise-corrupted input audio |
+| noise_reference.wav | Correlated reference noise |
+| results/ | Generated audio and performance results |
+| README.md | Project documentation |
+| .gitignore | Git tracking configuration |
+
+---
+
+# ⚙️ Installation & Setup
+
+## 1️⃣ Clone Repository
+
+```bash
 git clone https://github.com/srishtii26/Studio-Signal-Noise-Cancellation.git
-2️⃣ Navigate Into Project
+```
+
+---
+
+## 2️⃣ Navigate Into Project
+
+```bash
 cd Studio-Signal-Noise-Cancellation
-3️⃣ Open MATLAB
-Set the MATLAB Current Folder to the project directory containing run_demo.m. If the repository contains a nested project folder, open that folder instead.
-4️⃣ Run the Project
+```
+
+---
+
+## 3️⃣ Open MATLAB
+
+Launch MATLAB and set the Current Folder to the project directory containing `run_demo.m`.
+
+If the repository contains a nested project directory, navigate into that directory first.
+
+---
+
+## 4️⃣ Verify Project Files
+
+Ensure the following files and folders are available:
+
+```text
+audio/
+src/
+results/
+run_demo.m
+```
+
+---
+
+## 5️⃣ Run the Project
+
 Execute the following command in the MATLAB Command Window:
+
+```matlab
 run_demo
-5️⃣ View Generated Results
-Open the results/ directory after execution to inspect the enhanced audio, graphs and numerical evaluation.
-📊 Performance Evaluation
-The system uses reference-based Signal-to-Noise Ratio to measure the difference between the processed signal and the original clean signal.
+```
 
-\(\mathrm{SNR}=10\log_{10}\left(\frac{\sum_n s^2(n)}{\sum_n(\hat{s}(n)-s(n))^2}\right)\)
+The system will perform spectral subtraction, LMS adaptive filtering and performance evaluation.
 
-The experiment compares:
-Processing stage	Purpose
-Noisy input	Establish baseline SNR
-Spectral subtraction	Evaluate frequency-domain noise suppression
-Spectral subtraction + LMS	Evaluate the combined approach
+---
+
+## 6️⃣ View Generated Results
+
+Navigate to the `results/` directory to access:
+
+- Enhanced Audio Files
+- Signal Waveform Comparisons
+- SNR Comparison Graph
+- Numerical Performance Report
+
+---
+
+# 📊 Performance Evaluation
+
+The performance of the noise cancellation system is evaluated using Signal-to-Noise Ratio (SNR).
+
+SNR measures the relationship between useful signal power and noise or reconstruction error power.
+
+$$SNR=10\log_{10}\left(\frac{P_{signal}}{P_{noise}}\right)$$
+
+For reference-based evaluation:
+
+$$SNR=10\log_{10}\left(\frac{\sum_n s^2(n)}{\sum_n(\hat{s}(n)-s(n))^2}\right)$$
+
+Where:
+
+- $s(n)$ — Original clean reference signal
+- $\hat{s}(n)$ — Processed signal
+- $P_{signal}$ — Signal power
+- $P_{noise}$ — Noise or error power
+
+## Performance Comparison
+
+| Processing Stage | Evaluation Purpose |
+|---|---|
+| Original Noisy Signal | Establish Baseline SNR |
+| Spectral Subtraction | Evaluate Stationary Noise Reduction |
+| Spectral Subtraction + LMS | Evaluate Hybrid Noise Cancellation |
+
+A higher SNR generally indicates a smaller reconstruction error relative to the clean reference.
+
+Numerical results are generated automatically during MATLAB execution.
+
+The reconstructed repository has not yet been validated through MATLAB execution. No measured SNR improvement is claimed until experimental verification is completed.
+
+---
+
+# 📸 Generated Outputs
+
+The system is designed to generate the following output files:
+
+| Output File | Description |
+|---|---|
+| spectral_audio.wav | Spectral Subtraction Output |
+| cleaned_audio.wav | Final Noise-Cancelled Audio |
+| waveforms.png | Signal Waveform Comparison |
+| snr.png | SNR Performance Comparison |
+| snr.csv | Numerical Performance Report |
+
+## 📈 Waveform Analysis
+
+The generated waveform visualization enables comparison between:
+
+- Original Clean Signal
+- Noise-Corrupted Signal
+- Spectral Subtraction Output
+- Final Enhanced Signal
+
+## 📊 SNR Analysis
+
+The SNR comparison graph enables quantitative evaluation of the individual signal processing stages.
+
+Verified experimental plots can be added after executing the MATLAB demonstration.
+
+---
+
+# 🌟 Technical Highlights
+
+- Hybrid Frequency and Time-Domain Processing
+- STFT-Based Noise Spectrum Analysis
+- Adaptive Digital Filtering
+- Dynamic Filter Coefficient Optimization
+- Reference-Based Noise Cancellation
+- Mathematical Signal Modeling
+- Modular MATLAB Implementation
+- Automated Performance Evaluation
+- Audio Signal Reconstruction
+- Reproducible Demonstration Workflow
+
+---
+
+# 🌍 Real-World Applications
+
+The signal processing techniques explored in this project have potential applications in:
+
+## 🎙️ Audio and Studio Engineering
+
+- Studio Audio Enhancement
+- Podcast Noise Reduction
+- Voice Recording Enhancement
+- Audio Post-Processing
+
+## 📡 Communication Systems
+
+- Voice Communication Enhancement
+- Telecommunication Systems
+- Acoustic Noise Suppression
+- Signal Interference Reduction
+
+## 🤖 Artificial Intelligence
+
+- Speech Recognition Preprocessing
+- Voice Assistant Audio Enhancement
+- Audio Classification Preprocessing
+- Machine Learning-Based Audio Analysis
+
+## 🔬 Engineering and Research
+
+- Digital Signal Processing Research
+- Adaptive Filter Design
+- Acoustic Signal Analysis
+- Frequency-Domain Signal Processing
+- Embedded DSP Applications
+- Sensor Signal Enhancement
+
+---
+
+# ⚠️ Implementation Notes & Limitations
+
+- This repository contains a reconstructed and expanded implementation based on the original academic project report.
+- The demonstration uses synthetic speech and simulated noise rather than real studio recordings.
+- Spectral subtraction requires a suitable noise-only interval for noise estimation.
+- LMS adaptive noise cancellation requires a correlated noise reference.
+- The system currently performs offline audio processing.
+- Noise reduction performance depends on noise characteristics and filter configuration.
+- Experimental results require verification through MATLAB execution.
+
+---
+
+# 📌 Future Improvements
+
+- 🎙️ Real-Time Microphone-Based Noise Cancellation
+- 📈 Normalized LMS (NLMS) Algorithm
+- 🔬 LMS and NLMS Performance Comparison
+- 🔊 Real-World Speech Dataset Evaluation
+- 📊 Spectrogram-Based Signal Visualization
+- 🧪 Additional MSE and STOI Evaluation Metrics
+- 🤖 Deep Learning-Based Noise Cancellation
+- 🧠 Intelligent Adaptive Filtering
+- 🖥️ MATLAB App Designer Interface
+- ⚡ Embedded DSP Implementation
+- 📡 Communication Signal Enhancement
+- 🎛️ Dynamic Noise Estimation
+- 🔬 Comparative Analysis of Adaptive Filtering Algorithms
+
+---
+
+# 🧠 Learning Outcomes
+
+Through this project, we explored practical concepts in:
+
+- Signals and Systems
+- Digital Signal Processing
+- Time-Domain Signal Analysis
+- Frequency-Domain Signal Analysis
+- Fourier Transform Techniques
+- Short-Time Fourier Transform
+- Noise Spectrum Estimation
+- Spectral Subtraction
+- Adaptive Filter Design
+- Least Mean Squares Algorithm
+- Audio Signal Reconstruction
+- MATLAB Programming
+- Signal Quality Evaluation
+- Experimental Analysis
+- Engineering Research Documentation
+
+---
+
+# 🔬 Research & Engineering Perspective
+
+This project demonstrates the integration of mathematical signal processing techniques with computational implementation.
+
+The hybrid architecture explores how frequency-domain and adaptive filtering techniques can work together to address noise interference in audio signals.
+
+The project provides a foundation for further exploration in:
+
+- Advanced Digital Signal Processing
+- Intelligent Signal Processing
+- Adaptive Signal Enhancement
+- Communication Engineering
+- Acoustic Signal Processing
+- Embedded Signal Processing
+- AI-Assisted Signal Enhancement
+
+---
+
+# 📚 References
+
+1. Widrow, B., and Hoff, M. E., "Adaptive Switching Circuits", 1960.
+
+2. Boll, S. F., "Suppression of Acoustic Noise in Speech Using Spectral Subtraction", IEEE Transactions on Acoustics, Speech, and Signal Processing, 1979.
 
 
-Higher SNR indicates a smaller error relative to the clean reference. Improvement depends on the noise characteristics and filter configuration.
+---
 
-Numerical results will be generated when the demo is executed. MATLAB execution has not yet been verified for this reconstructed repository, and no measured SNR improvement is claimed.
-📸 Generated Outputs
-File	Description
-results/spectral_audio.wav	First-stage enhanced audio
-results/cleaned_audio.wav	Final hybrid output
-results/waveforms.png	Clean, noisy and enhanced waveform comparison
-results/snr.png	SNR comparison bar chart
-results/snr.csv	Numerical SNR values for all three stages
+# 📬 Feedback
 
+Feel free to share your feedback, technical suggestions or potential improvements!
 
-These files are generated locally and excluded from Git tracking by default. Verified plots can be added to the repository after running the experiment.
-🌍 Real-World Applications
-Potential applications of the techniques explored in this project include:
-- Studio audio post-processing
-- Speech enhancement for communication systems
-- Podcast and voice recording cleanup
-- Acoustic signal analysis
-- Audio preprocessing for speech recognition
-- Digital signal processing research and education
-⚠️ Implementation Notes & Limitations
-- This repository contains a reconstructed and expanded implementation based on the original academic project report, rather than a recovered copy of its source code.
-- The original report's illustrative LMS snippet uses the same signal as input and desired signal. This implementation uses a separate correlated noise reference instead.
-- The included demonstration uses synthesized speech and simulated hum and random noise, not real studio recordings.
-- Real-world use requires a suitable noise-only interval for spectral subtraction and an aligned correlated noise reference for LMS.
-- The current system processes audio offline and is not a real-time studio plugin.
-📌 Future Improvements
-- 🎙️ Real-time microphone-based noise cancellation
-- 📈 LMS and NLMS performance comparison
-- 🔊 Evaluation using real-world speech recordings
-- 📊 Spectrogram-based visual analysis
-- 🧪 Additional evaluation metrics such as MSE and STOI
-- 🤖 Machine learning-based speech enhancement
-- 🖥️ Interactive MATLAB App Designer interface
-- ⚡ Embedded DSP implementation
-🧠 Learning Outcomes
-The project explores practical concepts in:
-- Time-domain and frequency-domain signal analysis
-- Fourier transforms and signal reconstruction
-- Noise estimation and spectral processing
-- Adaptive filter design and LMS algorithms
-- MATLAB-based audio processing
-- Quantitative signal quality evaluation
-- Modular implementation and experimental documentation
-📚 References
-1. B. Widrow and M. E. Hoff, Adaptive Switching Circuits, 1960.
-2. S. F. Boll, Suppression of Acoustic Noise in Speech Using Spectral Subtraction, IEEE Transactions on Acoustics, Speech, and Signal Processing, 1979.
-🎓 Academic Project Details
-- Course: Signals and Systems Laboratory (ELC433)
-- Academic Year: 2025–26
-- Semester: IV
-- Institution: CHRIST (Deemed to be University), Bengaluru
-- Faculty In-Charge: Syam Chandran K
-👥 Project Team
-- Nevin Varghese
-- Niwin Pranav M V
-- Rashmika Ramachandran
-- Srishti S Rao
-📬 Feedback
-Suggestions and technical feedback are welcome. Feel free to open an issue on GitHub to discuss improvements or experimental observations.
-📬 Contact
-📧 Email: srishtisrao26@gmail.com
+Suggestions related to adaptive filtering, signal processing algorithms and experimental evaluation are always welcome. 🚀
 
-💼 LinkedIn: Srishti S Rao
+---
 
-💻 GitHub: srishtii26
-⭐ Support
-If you find this project useful, consider giving it a ⭐ on GitHub!
-👩‍💻 Repository Maintainer
-Srishti S Rao
+# 📬 Contact
 
-B.Tech – Electronics and Computer Science Engineering (AI/ML Specialization)
+📧 Email: [srishtisrao26@gmail.com](mailto:srishtisrao26@gmail.com)
 
-CHRIST (Deemed to be University)
+💼 LinkedIn: [Srishti S Rao](https://www.linkedin.com/in/srishti-s-rao-b09189316)
 
-Bengaluru, India
+💻 GitHub: [srishtii26](https://github.com/srishtii26)
+
+---
+
+# ⭐ Support
+
+If you find this project interesting or useful, consider giving it a ⭐ on GitHub!
+
+---
+
+# 👩‍💻 Repository Maintainer
+
+**Srishti S Rao**
+
+*B.Tech – Electronics and Computer  Engineering (AI/ML Specialization)*
+
+*CHRIST (Deemed to be University)*
+
+*Bengaluru, India*
+
+---
